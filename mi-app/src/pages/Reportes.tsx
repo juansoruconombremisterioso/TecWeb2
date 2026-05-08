@@ -1,4 +1,4 @@
-import Card from "../components/Card";
+
 
 export default function Reportes() {
   return (
@@ -6,9 +6,20 @@ export default function Reportes() {
       <h2>Reportes</h2>
 
       <div className="cards">
-        <Card title="Consultas" content={120} />
-        <Card title="Internaciones" content={18} />
-        <Card title="Altas Médicas" content={26} />
+        <div className="card">
+          <h3>Asistencia</h3>
+          <p>Reporte mensual</p>
+        </div>
+
+        <div className="card">
+          <h3>Rendimiento</h3>
+          <p>Evaluación trimestral</p>
+        </div>
+
+        <div className="card">
+          <h3>Comportamiento</h3>
+          <p>Seguimiento semanal</p>
+        </div>
       </div>
     </>
   );

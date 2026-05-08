@@ -1,9 +1,7 @@
-import Configuration from "../pages/Confirguration";
+import Paralelos from "../pages/Paralelos";
 import Home from "../pages/Home";
-import Reportes from "../pages/Reportes"; // Corregido el import (apuntaba a pacientes)
-import Pacientes from "../pages/Pacientes";
+import Reportes from "../pages/Reportes";
 
-// Definimos una interfaz para nuestras rutas para mantener el orden
 export interface AppRoute {
   name: string;
   path: string;
@@ -17,14 +15,9 @@ export const routes: AppRoute[] = [
     element: <Home />
   },
   {
-    name: "Pacientes",
-    path: "/pacientes",
-    element: <Pacientes />
-  },
-  {
-    name: "Configuración",
-    path: "/configuration",
-    element: <Configuration /> 
+    name: "Paralelos",
+    path: "/paralelos",
+    element: <Paralelos />
   },
   {
     name: "Reportes",

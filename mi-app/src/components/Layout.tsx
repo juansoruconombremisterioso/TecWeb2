@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 
 import Navbar from "./Navbar";
-import Sidebar from "./Sidebar";
 import Footer from "./Footer";
 
 import { routes } from "../data/routes";
@@ -14,11 +13,9 @@ export default function Layout() {
 
   return (
     <>
-      <Navbar title="Hospital Central" />
+      <Navbar title="🌈 Kinder Feliz" menu={menu} />
 
       <div className="container">
-
-        <Sidebar menu={menu} />
 
         <main className="main">
           <Outlet />
@@ -26,7 +23,8 @@ export default function Layout() {
 
       </div>
 
-      <Footer company="Sistema Hospitalario" year={2026} />
+      <Footer company="Kinder Feliz" year={2026} />
     </>
+
   );
 }

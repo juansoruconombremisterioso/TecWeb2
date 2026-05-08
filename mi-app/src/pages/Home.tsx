@@ -1,14 +1,23 @@
-import Card from "../components/Card";
-
 export default function Home() {
   return (
     <>
       <h2>Dashboard</h2>
 
       <div className="cards">
-        <Card title="Pacientes Hoy" content={35} />
-        <Card title="Médicos Activos" content={12} />
-        <Card title="Emergencias" content={4} />
+      <div className="card">
+        <h3>Niños Inscritos</h3>
+        <p>120</p>
+      </div>
+
+      <div className="card">
+        <h3>Paralelos Activos</h3>
+        <p>6</p>
+      </div>
+
+      <div className="card">
+        <h3>Docentes</h3>
+        <p>10</p>
+      </div>
       </div>
     </>
   );

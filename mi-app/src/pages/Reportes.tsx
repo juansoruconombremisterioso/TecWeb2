@@ -1,12 +1,14 @@
+import Card from "../components/Card";
+
 export default function Reportes() {
   return (
     <>
       <h2>Reportes</h2>
 
       <div className="cards">
-        <div className="card">Reporte Ventas Mensuales</div>
-        <div className="card">Reporte Usuarios Activos</div>
-        <div className="card">Reporte Inventario</div>
+        <Card title="Consultas" content={120} />
+        <Card title="Internaciones" content={18} />
+        <Card title="Altas Médicas" content={26} />
       </div>
     </>
   );

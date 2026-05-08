@@ -14,7 +14,7 @@ export default function Layout() {
 
   return (
     <>
-      <Navbar title="Hospital Central" />
+      <Navbar title="Panel Administrativo" />
 
       <div className="container">
 
@@ -26,7 +26,7 @@ export default function Layout() {
 
       </div>
 
-      <Footer company="Sistema Hospitalario" year={2026} />
+      <Footer company="Sistema Administrativo" year={2026} />
     </>
   );
 }

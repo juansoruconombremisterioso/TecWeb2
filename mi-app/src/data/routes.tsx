@@ -1,30 +1,23 @@
-import Configuration from "../pages/Confirguration";
 import Home from "../pages/Home";
-import Reportes from "../pages/Reportes"; // Corregido el import (apuntaba a pacientes)
-import Pacientes from "../pages/Pacientes";
+import Usuarios from "../pages/Usuarios";
+import Reportes from "../pages/Reportes";
+import Roles from "../pages/Roles";
 
-// Definimos una interfaz para nuestras rutas para mantener el orden
-export interface AppRoute {
-  name: string;
-  path: string;
-  element: React.ReactElement;
-}
-
-export const routes: AppRoute[] = [
+export const routes = [
   {
     name: "Inicio",
     path: "/",
     element: <Home />
   },
   {
-    name: "Pacientes",
-    path: "/pacientes",
-    element: <Pacientes />
+    name: "Usuarios",
+    path: "/usuarios",
+    element: <Usuarios />
   },
   {
-    name: "Configuración",
-    path: "/configuration",
-    element: <Configuration /> 
+  name: "Roles",
+  path: "/roles",
+  element: <Roles />
   },
   {
     name: "Reportes",

@@ -6,11 +6,27 @@ import laptop from "../assets/images/laptop.jpg";
 import phone from "../assets/images/phone.jpg";
 import headphones from "../assets/images/headphones.jpg";
 
+import { useContext } from "react";
+import { UserContext } from "../context/UserContext";
+
 export default function Home() {
+
+  const { user } = useContext(UserContext);
+
+  let estado = "";
+  if (user.logged) {
+    estado = "Sí";
+  } else {
+    estado = "No";
+  }
+
   return (
     <>
-      <h2>Dashboard</h2>
-      <p>Bienvenido al sistema.</p>
+      <h2>Dashboard.</h2>
+      <p>Bienvenido {user.name} - Rol: {user.role}</p>
+      <p>Sesion activa: {user.logged ? "Sí" : "No"}</p>
+      <p>Sesion activa: {estado}</p>
+
 
       <div className="cards">
 

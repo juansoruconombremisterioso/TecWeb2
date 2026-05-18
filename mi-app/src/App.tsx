@@ -6,27 +6,38 @@ import NotFound from "./pages/NotFound";
 
 import { routes } from "./data/routes";
 
+// IMPORTAR
+import { UserProvider } from "./context/UserContext";
+
 export default function App() {
+
   return (
-    <BrowserRouter>
-      <Routes>
 
-        <Route path="/" element={<Layout />}>
+    <UserProvider>
 
-          {routes.map((route, index) => (
-            <Route
-              key={index}
-              index={route.path === "/"}
-              path={route.path === "/" ? undefined : route.path.slice(1)}
-              element={route.element}
-            />
-          ))}
+      <BrowserRouter>
 
-        </Route>
+        <Routes>
 
-        <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<Layout />}>
 
-      </Routes>
-    </BrowserRouter>
+            {routes.map((route, index) => (
+              <Route
+                key={index}
+                index={route.path === "/"}
+                path={route.path === "/" ? undefined : route.path.slice(1)}
+                element={route.element}
+              />
+            ))}
+
+          </Route>
+
+          <Route path="*" element={<NotFound />} />
+
+        </Routes>
+
+      </BrowserRouter>
+
+    </UserProvider>
   );
 }
